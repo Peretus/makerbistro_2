@@ -1,5 +1,5 @@
-%h1 MenuItems#index
-%p Find me in app/views/menu_items/index.html.haml
+%h1.page-title Our Menu
+
 
 -@menu_items.each do |item|
 	.item
@@ -8,6 +8,9 @@
 			%h3= item.name
 		.price
 			%h3$#{item.price}
+		%p.description
+			This is a description!
+		%hr
 		
 
 / =form_for @menu_item do |f|
