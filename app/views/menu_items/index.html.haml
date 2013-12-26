@@ -1,0 +1,19 @@
+%h1 MenuItems#index
+%p Find me in app/views/menu_items/index.html.haml
+
+-@menu_items.each do |item|
+	.item
+		%i.fa.fa-cutlery
+		.title
+			%h3= item.name
+		.price
+			%h3$#{item.price}
+		
+
+/ =form_for @menu_item do |f|
+/ 	=f.label "Menu Item"
+/ 	=f.text_field :menu_item
+
+/ 	=f.submit "Go!"
+
+
