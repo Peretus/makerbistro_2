@@ -7,9 +7,13 @@ class MenuItemsController < ApplicationController
     @menu_item = MenuItem.find(params[:id])
   end
 
+  def new
+    @menu_item = MenuItem.new
+  end
+
   private
 
   def menu_item_params
-    params.require(:menu_item).permit(:id)
+    params.require(:menu_item).permit(:id, :name, :price)
   end
 end

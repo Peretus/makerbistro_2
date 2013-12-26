@@ -1,5 +1,6 @@
 Makerbistro2::Application.routes.draw do
   get "menu_items/index", as: "menu_items"
+  get 'menu_items/new' => 'menu_items#new', as: 'new_menu_item'
   get "menu_items/:id" => "menu_items#show", as: "menu_item"
   root "menu_items#index"
   # The priority is based upon order of creation: first created -> highest priority.
