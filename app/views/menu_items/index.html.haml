@@ -8,8 +8,11 @@
 			%h3= item.name
 		.price
 			%h3$#{item.price}
-		%p.description
-			This is a description!
+		%h4.description
+			= item.name.capitalize+" Ingredients"
+			%ul.ingredients-list
+				-item.ingredients.each do |ingredient|
+					%li=ingredient.name
 		%hr
 		
 
